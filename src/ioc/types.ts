@@ -10,7 +10,6 @@ const TYPES = Object.assign({
     Mapper: Symbol.for('Mapper'),
     ApiServer: Symbol.for('ApiServer'),
     Controllers: Symbol.for('Controllers'),
-    HelloWorldController: Symbol.for('HelloWorldController'),
 }, CONTROLLER_TYPES);
 
 export { TYPES }
