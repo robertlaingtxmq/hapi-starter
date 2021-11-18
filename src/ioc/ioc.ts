@@ -98,7 +98,7 @@ container.bind<ApiServer>(TYPES.ApiServer).to(ApiServer).inSingletonScope();
 container.bind<Controllers>(TYPES.Controllers).to(Controllers).inSingletonScope();
 
 // Controllers
-bindControllers();
+bindControllers(container);
 
 /**
  * Utility function to create TypeORM repositories from their types through generics
