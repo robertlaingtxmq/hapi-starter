@@ -24,7 +24,7 @@ class HapiController {
         This is the base path for the entire API.  For example, if your @HapiRoute annotation
         defines an endpoint at "myendpoint", it will be registered at "/api/myendpoint"
     */
-    private static basePath = '/api/'
+    private static basePath = '/api'
 
     /**
      * Static method that allows for the HAPI server initialization code to derive a complete
