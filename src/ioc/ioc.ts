@@ -1,10 +1,10 @@
 import { Container } from 'inversify';
 import { Logger } from 'winston';
 import { TYPES } from './types';
-import { HelloWorldController } from '../api/helloworld-controller';
 import { ApiServer } from '../apiserver';
 import { Controllers } from '../api/controllers';
 import { getConnection, Repository } from 'typeorm';
+import { bindControllers } from './controller-bindings';
 import * as Winston from 'winston';
 import { Mapper } from '../helpers/mapper';
 const Configue = require('configue');
@@ -98,7 +98,7 @@ container.bind<ApiServer>(TYPES.ApiServer).to(ApiServer).inSingletonScope();
 container.bind<Controllers>(TYPES.Controllers).to(Controllers).inSingletonScope();
 
 // Controllers
-container.bind<HelloWorldController>(TYPES.HelloWorldController).to(HelloWorldController).inSingletonScope();
+bindControllers();
 
 /**
  * Utility function to create TypeORM repositories from their types through generics
